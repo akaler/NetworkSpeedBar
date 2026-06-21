@@ -6,6 +6,10 @@
 
 A tiny macOS menu-bar app that shows live network upload/download speed.
 
+## Why I made this
+
+I built NetSpeedBar because I couldn’t find a simple, malware-free macOS network speed monitor that just did the bare minimum. Most alternatives were bloated, ad-ridden, or came with bundled junk I didn’t want. This app does one thing: show your live upload and download speeds in the menu bar. No telemetry, no ads, no nonsense.
+
 ## What it does
 
 - Shows current download (green) and upload (blue) speeds in the menu bar.
