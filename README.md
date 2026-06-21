@@ -1,0 +1,60 @@
+# NetSpeedBar
+
+A tiny macOS menu-bar app that shows live network upload/download speed.
+
+## What it does
+
+- Shows current download (green) and upload (blue) speeds in the menu bar.
+- Click the icon to see:
+  - Exact numeric speeds.
+  - A 2-minute live graph.
+  - A poll-interval picker.
+  - Per-interface traffic breakdown.
+   - Free memory and total memory.
+   - A **Quit** button.
+
+## Requirements
+
+- macOS 13 (Ventura) or later.
+- Xcode command-line tools / Swift 5.9+.
+
+## Build
+
+Run the build script:
+
+```bash
+./bundle.sh
+```
+
+This creates `build/NetSpeedBar.app`.
+
+## Run
+
+```bash
+open build/NetSpeedBar.app
+```
+
+The app has no dock icon; it lives only in the menu bar.
+
+## Quit
+
+Click the menu-bar icon and choose **Quit NetSpeedBar** (or press `q`).
+
+## Project layout
+
+```
+Sources/NetSpeedBar/
+  AppConstants.swift      # Shared colors and settings
+  NetSpeedApp.swift       # App entry point, menu-bar button, and dropdown menu
+  NetworkMonitor.swift    # Polls network counters and publishes speed data
+  Formatters.swift        # Pretty-prints speeds as MB/s, KB/s, etc.
+  BarSparkline.swift      # Tiny trend graph in the menu bar
+  SpeedGraphView.swift    # Larger graph inside the dropdown
+  SystemMonitor.swift     # Free memory and CPU temperature sensors
+```
+
+## How it works
+
+Every second the app reads per-interface byte counters via macOS's `getifaddrs()`. It diffs those counters against the previous sample to compute bytes-per-second rates, then updates the menu bar and graph.
+
+The system-info row reads Mach memory counters.
