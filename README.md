@@ -1,5 +1,9 @@
 # NetSpeedBar
 
+<p align="center">
+  <img src="Resources/AppIcon_1024.png" alt="NetSpeedBar app icon" width="128">
+</p>
+
 A tiny macOS menu-bar app that shows live network upload/download speed.
 
 ## What it does
@@ -12,6 +16,16 @@ A tiny macOS menu-bar app that shows live network upload/download speed.
   - Per-interface traffic breakdown.
    - Free memory and total memory.
    - A **Quit** button.
+
+## Screenshots
+
+<p align="center">
+  <img src="Resources/Screenshots/menu-bar-1.png" alt="NetSpeedBar in the menu bar" width="362">
+  &nbsp;
+  <img src="Resources/Screenshots/menu-bar-2.png" alt="NetSpeedBar in the menu bar" width="332">
+  <br><br>
+  <img src="Resources/Screenshots/dropdown.png" alt="NetSpeedBar dropdown menu" width="360">
+</p>
 
 ## Requirements
 
