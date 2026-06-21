@@ -18,6 +18,18 @@ A tiny macOS menu-bar app that shows live network upload/download speed.
 - macOS 13 (Ventura) or later.
 - Xcode command-line tools / Swift 5.9+.
 
+## Download
+
+Pre-built releases are available on the [Releases](https://github.com/akaler/NetworkSpeedBar/releases) page.
+
+1. Download the latest `NetSpeedBar-vX.X.X.zip`.
+2. Unzip it.
+3. Double-click **NetSpeedBar.app** to launch.
+
+> **Note:** Because the app isn't signed with a paid Apple Developer ID, macOS Gatekeeper may warn that the developer can't be verified. To run it, right-click the app and choose **Open**, or remove the quarantine flag in Terminal:
+>
+>     xattr -dr com.apple.quarantine NetSpeedBar.app
+
 ## Build
 
 Run the build script:
